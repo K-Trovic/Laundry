@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html>
+    <head >
+        <title>The Hysson Cleaners Contact</title>
+        
+          <link rel="stylesheet" href="Bootstrap.css">
+          <link rel="stylesheet" href="Icons">
+             <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  rel="stylesheet"/>
+        <style>
+            body{
+                height:100vh;
+            }
+                            .navbar-scroll .nav-link,
+                .navbar-scroll .navbar-toggler-icon,
+                .navbar-scroll .navbar-brand {
+                  color: #fff;
+                }
+
+                /* Color of the links AFTER scroll */
+                .navbar-scrolled .nav-link,
+                .navbar-scrolled .navbar-toggler-icon,
+                .navbar-scrolled .navbar-brand {
+                  color: #fff;
+                }
+
+                /* Color of the navbar AFTER scroll */
+                .navbar-scroll,
+                .navbar-scrolled {
+                  background-color: #cbbcb1;
+                }
+
+                .mask-custom {
+                  backdrop-filter: blur(5px);
+                  background-color: rgba(255, 255, 255, .15);
+                }
+
+                .navbar-brand {
+                  font-size: 1.75rem;
+                  letter-spacing: 3px;
+                }
+            
+            .text{
+                word-spacing: 10px;
+                text-align:left;
+                font-style: oblique;
+                font-family: cursive;
+            }
+            
+            video{
+                         position :absolute;
+                        right:0;
+                        bottom:0;
+                        z-index:-1;
+            }
+                @media (min-width: 400px) and (max-width: 786px){
+                   
+                    .lap{
+                        display:none;
+                    }
+                    a:link{
+                        color:darkblue;
+                    }
+                    a:visited:hover{
+                        color:red;
+                    }
+                    
+                    .social{
+                        color:white;
+                    }
+                     .formContainer{
+                         background-image:url('../Img/contact.jpg') ;
+                         opacity:0.65;
+                         width:60%;
+                         padding:15px 5px;
+                         position:fixed;
+                        left:20%;
+                       
+                         height : auto;
+                         margin-top:100px;
+                          border:none;
+                }
+                .social{
+                    bottom:0;
+                    position:fixed;
+                    height:auto;
+                    
+                }
+                ul li{
+                    display:inline-block;
+                    list-style:disc inside;
+                }
+                
+            }
+            @media (min-width:786px) {
+                
+                .phone{
+                    
+                display:none;
+                }
+                .social{
+                    width:20%;
+                    padding:5px 5px;
+                    justify-content:center;
+                    position:fixed;
+                    right:0;
+                    bottom:30px;
+                    font-size:20px;
+                    font-family:cursive;
+                    color:green;
+                    
+                }
+                .formContainer{
+                    background-image: url('../Img/contact.jpg');
+                     width:50%;
+                         padding:15px 5px;
+                         justify-content:center;
+                         height:530px;
+                         border:1px inset blue;
+                         position:fixed;
+                         right:25%;
+                         left:25%;
+                         border-radius:10px;
+                         margin-top:100px;
+                }
+            }
+            .error{color:red}
+            
+       </style>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+         <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><span style="color: #5e9693;"> Hysson</span><span style="color: #fff;">Cleaners</span></a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Prices.html"> Prices</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Login</a>
+          </li>
+         
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="https://www.twitter.com/Hysson_Cleaners">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="http://www.instagram.com/Hysson_Cleaners">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+        
+    </head>
+    <body>
+
+        <?php
+        if($MessageStatus=true);
+        
+        echo'Sent Successfully';
+        
+        ?>
+        
+        <?php
+        else: 
+        ?>
+        
+        <video autoplay plays-inline muted loop  class="phone">
+        <source src="../Img/CB.mp4" type="video/mp4" >
+         
+                </video>
+        <video autoplay plays-inline muted loop  class="lap">
+         <source src="../Img/CB2.mp4" type="video/mp4"  >
+                </video>
+        
+        <div class="formContainer">
+            
+            <form class="text" action="mail.php" method="post" enctype="application/x-www-form-urlencoded">
+                <!-- Name input -->
+                <div class="form-outline mb-4" style="color:#898f10">
+                  <input type="text"  name="name " id="Name" class="form-control" />
+                 <span class="error" ><?php echo $NameErr;?></span>
+                  <label class="form-label" for="Name">Name</label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4" style="color:#cfcf22">
+                  <input type="email"  name= "Email"   id="typeEmail" class="form-control" />
+                  <span class="error" ><?php echo $EmailErr;?></span>
+                  <label class="form-label" for="typeEmail">Email address</label>
+                </div>
+
+                <!-- Message input -->
+                <div class="form-outline mb-4" style="color:yellow">
+                  <textarea class="form-control"  name="Message"    id="textArea" rows="4"></textarea>
+                 <label class="form-label" for="textArea">Message</label>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4"style="color:#898f10">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="checkbox" checked />
+                  <label class="form-check-label" for="checkbox">
+                    Send me a copy of this message
+                  </label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4" style="color:red" >Send</button>
+                
+</form>
+            
+        </div>
+        
+        <div class="social">
+        <ul>
+            <li>Call us on <a href="tel:+2540712345678p254">0712345678</a></li>
+            <li> <address>P.O Box: 123; 220022</address></li>
+            <li style="color:orange">Instagram <i class="fab fa-instagramndigo"></i>@<a href="http://www.instagram.com/Hysson_Cleaners">Hysson_Cleaners</a> </li>
+            <li><a href="https://twitter.com/Hysson_Cleaners?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"> @Hysson_Cleaners</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+        </ul>
+</div>
+
+             <script src="Hysson.js"></script>
+           <script  type="text/javascript"  src="MDB.js"></script>
+           <?php
+           endif;
+           ?>
+    </body>
+</html>
